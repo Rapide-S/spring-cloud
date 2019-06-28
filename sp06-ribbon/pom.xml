@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tedu</groupId>
-	<artifactId>sp11-zuul</artifactId>
+	<artifactId>sp06-ribbon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sp11-zuul</name>
+	<name>sp06-ribbon</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -21,12 +21,12 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<dependency>
@@ -34,19 +34,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+			<dependency>
 			<groupId>com.tedu</groupId>
 			<artifactId>sp01-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-	<dependency>
+		
+		<dependency>
 		<groupId>org.springframework.retry</groupId>
-		<artifactId>spring-retry</artifactId>
-	</dependency>
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-config</artifactId>
-	</dependency>
+			<artifactId>spring-retry</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
