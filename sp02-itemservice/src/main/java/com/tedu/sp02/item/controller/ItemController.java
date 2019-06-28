@@ -43,5 +43,7 @@ public class ItemController {
 	public JsonResult decreaseNumber(@RequestBody List<Item> items) {
 		itemService.decreaseNumbers(items);
 		return JsonResult.ok();
+		
+		//本地添加注释~~
 	}
 }
