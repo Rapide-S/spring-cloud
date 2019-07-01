@@ -24,10 +24,15 @@ server:
 # eureka1 向 eureka2 注册
 eureka:
   instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  
     hostname: eureka1
   client:
     service-url: 
       defaultZone: http://eureka2:2002/eureka
+
+ 
 
 ---
 spring:
@@ -39,7 +44,11 @@ server:
 # eureka2 向 eureka1 注册
 eureka:
   instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  
     hostname: eureka2
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka
+      
