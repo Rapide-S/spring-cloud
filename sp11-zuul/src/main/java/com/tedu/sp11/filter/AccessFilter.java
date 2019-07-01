@@ -9,7 +9,9 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import com.tedu.web.util.JsonResult;
-
+/*
+ * 过滤器，实现对权限验证
+ */
 @Component
 public class AccessFilter extends ZuulFilter{
 	@Override

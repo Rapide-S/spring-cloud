@@ -20,7 +20,7 @@ eureka:
 #    order-service: /order-service/**
 
 zuul:
-  retryable: true
+  retryable: true  #开启重试，还需要添加依赖
   
 ribbon:
   ConnectTimeout: 1000
