@@ -10,6 +10,10 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
       
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
       #http://localhost:8001/actuator/hystrix.stream
       #http://localhost:8002/actuator/hystrix.stream
       #http://localhost:3001/actuator/hystrix.stream
