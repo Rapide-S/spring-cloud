@@ -7,6 +7,12 @@ spring:
       name: zuul
       profile: dev
       
+    inetutils:
+      ignored-interfaces:
+        - VM.*
+      preferred-networks:
+        - 176.49.3
+
 eureka:
   client:
     service-url:
